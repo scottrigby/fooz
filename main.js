@@ -1,13 +1,13 @@
-const sfx = [
-    new Audio('sfx/0_mmm.wav'),
-    new Audio('sfx/1_hit_it.wav'),
-    new Audio('sfx/2_get_it.wav'),
-    new Audio('sfx/3_ow.wav'),
-    new Audio('sfx/4_show_them_girl.wav'),
-    new Audio('sfx/5_boom_boom.wav'),
-    new Audio('sfx/6_ba_ba.wav'),
-    new Audio('sfx/7_ba_ba.wav'),
-    new Audio('sfx/8_krrrrrr.wav'),
+const sfxFiles = [
+    'sfx/0_mmm.wav',
+    'sfx/1_hit_it.wav',
+    'sfx/2_get_it.wav',
+    'sfx/3_ow.wav',
+    'sfx/4_show_them_girl.wav',
+    'sfx/5_boom_boom.wav',
+    'sfx/6_ba_ba.wav',
+    'sfx/7_ba_ba.wav',
+    'sfx/8_krrrrrr.wav',
 ];
 
 function main() {
@@ -15,7 +15,8 @@ function main() {
     
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', () => {
-            sfx[i].play();
+            const audio = new Audio(sfxFiles[i])
+            audio.play();
         });
     }
 }
